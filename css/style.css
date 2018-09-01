@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Eczar|Merienda|Poppins|Roboto");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: orangered;
+}
+a:hover {
+  text-decoration: none;
+}
+label{
+  color: orangered;
+}
+.padding {
+  padding: 1.1em 0;
+}
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+.clear {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+.header-top-left{
+  padding:8px; 
+}
+.header-top-right ul{
+  list-style: none;
+}
+.header-top-right ul li{
+  float: left;
+  padding:8px 10px;
+}
+
+
+.header-top-right ul li:hover {
+  background: orangered;
+}
+/* Navbar CSS */
+.navbar-brand{
+  margin-left:30px; 
+}
+nav ul li{
+  padding:3px 10px;
+}
+nav button{
+  padding: 5px 0;
+}
+.navbar-collapse,.nav-right{
+  padding-right: 30px;
+}
+
+/* Two block part here */
+
+
+/* Most Important Slider */
+.MultiCarousel {
+  float: left;
+  overflow: hidden;
+  padding: 15px;
+  width: 100%;
+  position: relative;
+}
+.MultiCarousel .MultiCarousel-inner {
+  transition: 1s ease all;
+  float: left;
+}
+.MultiCarousel .MultiCarousel-inner .item {
+  float: left;
+}
+.MultiCarousel .MultiCarousel-inner .item div {
+  text-align: center;
+  background: #f1f1f1;
+  color: #666;
+}
+.MultiCarousel-inner .item h5{
+    padding: 8px auto;
+}
+.MultiCarousel-inner .item img{
+    padding: 0;
+    width: 250px;
+    height: auto;
+}
+.MultiCarousel .leftLst,.MultiCarousel .rightLst {
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 20px);
+}
+.MultiCarousel .leftLst {
+  left: 0;
+}
+.MultiCarousel .rightLst {
+  right: 0;
+}
+
+.MultiCarousel .leftLst.over,.MultiCarousel .rightLst.over {
+  pointer-events: none;
+  background: #ccc;
+}
+
+/* Card CSS */
+.all-cards{
+  padding:5px 15px;
+}
+.card{
+  border-radius:0;
+}
+.card img{
+    padding: 3px 8px;
+}
+
+/* Parallax for the page */
+figure {
+  background: url(../img/parallax.jpg) fixed no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  opacity:0.8;
+}
+
+/* Vendors part CSS */
+.vendors {
+  font-family: "Merienda", sans-serif;
+}
+.vendors h2{
+  position: relative;
+}
+/* For Contact.html */
+#contactForm .h4 {
+  font-weight:400;
+  border-bottom:1px solid silver;
+}
+
+.required-input {
+  color:maroon;
+}
+
+.static-map {
+  margin-bottom:20px;
+}
+
+/* Profile Page */
+.edit-info a{
+  color:orangered;
+}
+
+/* Accordion Maintain */
+.accordion input{
+  width: 380px;
+  margin: 0 auto;
+}
+
+
+/* SLider of Product Details */
+.relatedProducts{
+  padding:10px 0 10px 5px;
+}
+.relatedProducts div{
+  overflow: hidden;
+  padding:0 5px 10px 5px;
+  margin: 0 2px;
+}
+.relatedProducts div:first-child{
+  padding: 0;
+}
+.relatedProducts .text-center:hover{
+  border-top: 1px solid orangered;
+  border-bottom: 1px solid orangered;
+  overflow: hidden;
+}
+
+
+
+/* Just for responsive media */
+
+@media (max-width: 440px) and (min-width:439px) {
+  .header-top-right {
+    float: none !important;
+  }
+  .header-top-left {
+    float: none !important;
+    display: none;
+    margin: 0 auto;
+  }
+  .navbar input {
+    width: 200px;
+    margin-right: 10px;
+  }
+  f-block{
+    padding-top: 0;
+  }
+  .all-cards{
+    width: 90%;
+    margin: 0 auto;
+  }
+} 
+@media (max-width: 768px) and (min-width: 767px) {
+  #contactForm .static-map img {
+    width:100%;
+  }
+  .all-cards{
+    width: 80%;
+  }
+}

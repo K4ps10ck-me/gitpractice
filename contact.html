@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome 5 CSS  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <!-- Bootstrap CSS in HTML -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- SLick CSS in HTML -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <!-- Custom CSS in HTML -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <!-- Header part isn HTML -->
+    <div class="header-top container">
+            <div class="row">
+        
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ml-auto header-top-right">
+                    <ul class="user-menu">
+                        <li>
+                            <a href="Profile.html" id="profile_menu">
+                                <img id="image" style="border-radius:50% ;width:40px">
+                            </a>
+                        </li>
+                        <li id="order_menu">
+                            <a href="OrderList.html">My Order</a>
+                        </li>
+                        <li id="login_menu">
+                            <a href="#loggedin" data-target="#loggedin" data-toggle="modal">Login</a>
+                        </li>
+                        <li>
+                            <a href="#register" data-toggle="modal" data-target="#register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+    
+    
+            <!-- for login modal -->
+            <div class="modal fade" id="loggedin" tabindex="-1" role="dialog" aria-labelledby="loggedin-model" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Login</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="Email">Email address</label>
+                                    <input type="text" class="form-control" id="userName" aria-describedby="emailHelp" placeholder="Enter email or username" required>
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="Password" placeholder="Password" required>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary">Forgot my password</button>
+                            <button type="submit" class="btn btn-primary" id="login">Login</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- For Register modal -->
+            <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="login-model" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registered">Register</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="f-name">Full Name</label>
+                                    <input type="text" class="form-control" id="fullname" required>
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="Password" placeholder="Password">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-target="#" data-toggle="modal">Already have an account?</button>
+                            <button type="button" class="btn btn-primary">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top clear" id="wrapper">
+        <a class="navbar-brand" href="index.html">Kirana Lol
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product_detail.html">Find products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html" id="cart_menu">In Cart</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 ">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for items..." aria-label="Search">
+                <button class="btn btn-outline-success my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- contact form making  -->
+    <div>
+        <!-- First Section -->
+        <div class="container-fluid">
+            <h1>Contact Information</h1>
+            <hr>
+            <form action="javascript:void(0);" method="get" id="contactForm">
+                <input class="form-control" type="hidden" name="Introduction" value="This email was sent from ....">
+                <input class="form-control" type="hidden" name="subject" value=" Contact Form">
+                <input class="form-control" type="hidden" name="to" value="mail@mail.com">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div id="successfail"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-12 col-md-6" id="message">
+                        <h2 class="h4">
+                            <i class="fa fa-envelope"></i> Contact Us
+                            <small>
+                                <small class="required-input">&nbsp;(*required)</small>
+                            </small>
+                        </h2>
+                        <div class="form-group">
+                            <label for="from-name">Name</label>
+                            <span class="required-input">*</span>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <input class="form-control" type="text" name="name" required="" placeholder="Full Name" id="from-name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="from-email">Email</label>
+                            <span class="required-input">*</span>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-envelope-open"></i>
+                                    </span>
+                                </div>
+                                <input class="form-control" type="text" name="email" required="" placeholder="Email Address" id="from-email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                <div class="form-group">
+                                    <label for="from-phone">Phone</label>
+                                    <span class="required-input">*</span>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fas fa-phone"></i>
+                                            </span>
+                                        </div>
+                                        <input class="form-control" type="text" name="phone" required="" placeholder="Primary Phone" id="from-phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                <div class="form-group">
+                                    <label for="from-calltime">Best Time to Call</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="far fa-clock"></i>
+                                            </span>
+                                        </div>
+                                        <select class="form-control" name="call time" id="from-calltime">
+                                            <optgroup label="Best Time to Call">
+                                                <option value="Morning" selected="">Morning</option>
+                                                <option value="Afternoon">Afternoon</option>
+                                                <option value="Evening">Evening</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="from-comments">Comments</label>
+                            <textarea class="form-control" rows="5" name="comments" placeholder="Enter Comments" id="from-comments"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <button class="btn btn-primary btn-block" type="reset">
+                                        <i class="fa fa-undo"></i> Reset</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary btn-block" type="submit">Submit
+                                        <i class="fa fa-chevron-circle-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="d-flex d-md-none">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2 class="h4">
+                            <i class="fa fa-location-arrow"></i> Locate Us</h2>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <div class="static-map">
+                                    <a href="https://goo.gl/maps/Fe7Gj24Rm5y" target="_blank" rel="noopener">
+                                        <img class="img-fluid" src="img/map.PNG"
+                                        alt="Google Map of Budhanilkantha">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-12 col-lg-6">
+                                <h2 class="h4">
+                                    <i class="fa fa-user"></i> Our Info</h2>
+                                <div>
+                                    <span>
+                                        <strong>Name</strong>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>mail@mail.com</span>
+                                </div>
+                                <div>
+                                    <span>pauchha.com</span>
+                                </div>
+                                <hr class="d-sm-none d-md-block d-lg-none">
+                            </div>
+                            <div class="col-sm-6 col-md-12 col-lg-6">
+                                <h2 class="h4">
+                                    <i class="fa fa-location-arrow"></i> Our Address</h2>
+                                <div>
+                                    <span>
+                                        <strong>Office Name</strong>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>address sth</span>
+                                </div>
+                                <div>
+                                    <span>Sth sth sth</span>
+                                </div>
+                                <div>
+                                    <abbr data-toggle="tooltip" data-placement="top" title="Office Phone: +9779840068134">?</abbr> +977 984-XXX-XXXX</div>
+                                <hr class="d-sm-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Second Section -->
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Contact Information</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:void(0);" method="get" id="contactForm">
+                            <input class="form-control" type="hidden" name="Introduction" value="This email was sent from www.awebsite.com">
+                            <input class="form-control" type="hidden" name="subject" value="Awebsite.com Contact Form">
+                            <input class="form-control" type="hidden" name="to" value="email@awebsite.com">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div id="successfail"></div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-12 col-md-6" id="message">
+                                    <h2 class="h4">
+                                        <i class="fa fa-envelope"></i> Contact Us
+                                        <small>
+                                            <small class="required-input">&nbsp;(*required)</small>
+                                        </small>
+                                    </h2>
+                                    <div class="form-group">
+                                        <label for="from-name">Name</label>
+                                        <span class="required-input">*</span>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-user-o"></i>
+                                                </span>
+                                            </div>
+                                            <input class="form-control" type="text" name="name" required="" placeholder="Full Name" id="from-name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="from-email">Email</label>
+                                        <span class="required-input">*</span>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-envelope-o"></i>
+                                                </span>
+                                            </div>
+                                            <input class="form-control" type="text" name="email" required="" placeholder="Email Address" id="from-email">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="from-phone">Phone</label>
+                                                <span class="required-input">*</span>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="fa fa-phone"></i>
+                                                        </span>
+                                                    </div>
+                                                    <input class="form-control" type="text" name="phone" required="" placeholder="Primary Phone" id="from-phone">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="from-calltime">Best Time to Call</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">
+                                                            <i class="fa fa-clock-o"></i>
+                                                        </span>
+                                                    </div>
+                                                    <select class="form-control" name="call time" id="from-calltime">
+                                                        <optgroup label="Best Time to Call">
+                                                            <option value="Morning" selected="">Morning</option>
+                                                            <option value="Afternoon">Afternoon</option>
+                                                            <option value="Evening">Evening</option>
+                                                        </optgroup>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="from-comments">Comments</label>
+                                        <textarea class="form-control" rows="5" name="comments" placeholder="Enter Comments" id="from-comments"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <button class="btn btn-primary btn-block" type="reset">
+                                                    <i class="fa fa-undo"></i> Reset</button>
+                                            </div>
+                                            <div class="col">
+                                                <button class="btn btn-primary btn-block" type="submit">Submit
+                                                    <i class="fa fa-chevron-circle-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="d-flex d-md-none">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <h2 class="h4">
+                                        <i class="fa fa-location-arrow"></i> Locate Us</h2>
+                                    <div class="form-row">
+                                        <div class="col-12">
+                                            <div class="static-map">
+                                                <a href="https://www.google.com.np/maps/@27.7384198,85.3309366,13z" target="_blank" rel="noopener">
+                                                    <img class="img-fluid" src="https://www.google.com.np/maps/@27.7384198,85.3309366,13z" alt="Google Map of Budhanilkantha">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-12 col-lg-6">
+                                            <h2 class="h4">
+                                                <i class="fa fa-user"></i> Our Info</h2>
+                                            <div>
+                                                <span>
+                                                    <strong>Name</strong>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span>mail@mail.com</span>
+                                            </div>
+                                            <div>
+                                                <span>sth.com</span>
+                                            </div>
+                                            <hr class="d-sm-none d-md-block d-lg-none">
+                                        </div>
+                                        <div class="col-sm-6 col-md-12 col-lg-6">
+                                            <h2 class="h4">
+                                                <i class="fa fa-location-arrow"></i> Our Address</h2>
+                                            <div>
+                                                <span>
+                                                    <strong>Office Name</strong>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span>sth sth</span>
+                                            </div>
+                                            <div>
+                                                <span>sth sth sth</span>
+                                            </div>
+                                            <div>
+                                                <abbr data-toggle="tooltip" data-placement="top" title="Office Phone: +9779840068134">O:</abbr> +977 - 984-XXX-XXXX</div>
+                                            <hr class="d-sm-none">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer in HTML -->
+    <footer class="bg-dark text-white border-top border-info">
+        <div class="container text-center text-sm-left position-relative py-5">
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4 text-center">
+                    <h3 class="text-info pb-2 border-bottom border-info">Quick Links</h3>
+                    <ul class="list-unstyled d-inline-block d-sm-block">
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">Home</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">About</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">Hotels</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <h3 class="text-info pb-2 border-bottom border-info">Lorem Ipsum</h3>
+                    <ul class="list-unstyled d-inline-block d-sm-block">
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <h3 class="text-info pb-2 border-bottom border-info">Quick Links</h3>
+                    <ul class="list-unstyled d-inline-block d-sm-block">
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Position to come top top -->
+            <div class="text-center position-absolute w-100 mt-4">
+                <a href="#top">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="fa fa-angle-up fa-stack-1x text-white"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Second footer Started -->
+        <div class="pt-5 pb-4 bg-primary text-light">
+            <div class="container">
+                <div class="row">
+                    <!-- Second footer, first column -->
+                    <div class="col-md-6 col-lg-4 text-center text-md-left pb-4">
+                        <h2 class="mb-2 text-white">
+                            <i class="fas fa-gem fa-fw"></i> k4ps10ck</h2>
+                        <p class="mb-1">
+                            <i class="fas fa-map-marker fa-fw"></i>&nbsp;Gokarneshwor-7, Kathmandu</p>
+                        <p class="mb-1">
+                            <i class="fas fa-phone fa-fw"></i>&nbsp;+977 984 006 8134</p>
+                        <p class="mb-1">
+                            <i class="fas fa-envelope fa-fw"></i>&nbsp;
+                            <a href="mailto:meh_kapil@live.com" class="text-white">meh_kapil@live.com</a>
+                        </p>
+                    </div>
+                    <!-- Second footer, second column -->
+                    <div class="col-md-6 col-lg-4 text-center text-md-left pb-4">
+                        <p class="my-3">Post quorum necem nihilo lenius ferociens Gallus ut leo cadaveribus pastus multa huius modi scrutabatur.
+                            quae singula narrare non refert, me professione modum, quod evitandum est, excedamus.</p>
+                    </div>
+
+                    <!-- Second footer, third column -->
+                    <div class="col-lg-4 text-center text-lg-right pb-4">
+                        <h3 class="mb-0">Follow us</h3>
+                        <p class="mb-2">Subscribe to our newsletter</p>
+                        <form class="d-flex justify-content-center justify-content-lg-end">
+                            <div class="form-group w-75">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" required="" placeholder="Your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$"
+                                        inputmode="email">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark" type="submit">Go!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- All icons in footer -->
+                        <div>
+                            <a href="www.instagram.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="www.twitter.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                            <a href="www.facebook.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a href="www.snapchat.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-snapchat-ghost fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- last footer part of the page -->
+        <div class="text-center text-lg-left py-2 small bg-dark text-info font-italic">
+            <div class="container">
+                <p class="m-auto text-center">© 2018 Company ~ All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- All Script for the HTML -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <script src="code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

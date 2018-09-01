@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome 5 CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <!-- Bootstrap CSS in HTML -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- SLick CSS in HTML -->
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <!-- For Online Slick -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+
+    <!-- Custom CSS in HTML -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Header part isn HTML -->
+    <div class="header-top container">
+            <div class="row">
+        
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ml-auto header-top-right">
+                    <ul class="user-menu">
+                        <li>
+                            <a href="Profile.html" id="profile_menu">
+                                <img id="image" style="border-radius:50% ;width:40px">
+                            </a>
+                        </li>
+                        <li id="order_menu">
+                            <a href="OrderList.html">My Order</a>
+                        </li>
+                        <li id="login_menu">
+                            <a href="#loggedin" data-target="#loggedin" data-toggle="modal">Login</a>
+                        </li>
+                        <li>
+                            <a href="#register" data-toggle="modal" data-target="#register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+    
+    
+            <!-- for login modal -->
+            <div class="modal fade" id="loggedin" tabindex="-1" role="dialog" aria-labelledby="loggedin-model" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Login</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="Email">Email address</label>
+                                    <input type="text" class="form-control" id="userName" aria-describedby="emailHelp" placeholder="Enter email or username" required>
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="Password" placeholder="Password" required>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary">Forgot my password</button>
+                            <button type="submit" class="btn btn-primary" id="login">Login</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- For Register modal -->
+            <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="login-model" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registered">Register</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="f-name">Full Name</label>
+                                    <input type="text" class="form-control" id="fullname" required>
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="Password" placeholder="Password">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-target="#" data-toggle="modal">Already have an account?</button>
+                            <button type="button" class="btn btn-primary">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top clear" id="wrapper">
+        <a class="navbar-brand" href="index.html">Kirana Lol
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="product_detail.html">Find products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html" id="cart_menu">In Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 ">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for items..." aria-label="Search">
+                <button class="btn btn-outline-success my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Products detail Section -->
+    <section class="product-detail padding">
+        <h3 class=" text-center padding">Product Details</h3>
+        <div class="container">
+        <div class="row">
+
+            <!-- Product Contents -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+
+                <!-- Particular Content in the page -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <img class="img-fluid w-100 rounded-circle" src="img/col4.jpg" alt="">
+                    </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-6 padding">
+                            <p> Brand: <span id="brand"></span> </p>
+                            <p> Product Code: <span id="id"></span></p>
+                            <p> Product Name:<span id="pn"></span> </p>
+                            <p> Category:<span id="cat"></span> </p>
+                            <p> Discount:<span id="dis"></span> </p> 
+                            <p> Availability: </p>
+                            <br>
+                            <p>Price:</p>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-9">
+                                <form>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="" id="" value="option1" checked>
+                                        <label class="form-check-label">Option one is this and that </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="" id="" value="option2">
+                                        <label class="form-check-label" for="">Be sure to include why it's great</label>
+                                    </div>
+                                    <label for="">Qty:</label>
+                                    <input type="text" class="span1  text-center" placeholder="1"> &nbsp;
+                                    <button class="btn btn-dark" type="submit">Add to cart</button>
+                                </form>
+                        </div>
+                        <!-- Tab-pane Intro -->
+
+                        <div class="col-sm-12 col-md-12 col-lg-9 padding">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
+                              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Additional Info</a>
+                            </div>
+
+                            <!-- Tab-pane Content -->
+                          <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active px-5 py-5" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Lol</div>
+                            <div class="tab-pane fade px-5 py-5" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Hahaha</div>
+                          </div>
+                        </div>
+                </div>
+
+                <!-- Related products block -->
+                <div class="padding text-center">
+                    <h3>Related Products</h3>
+                    <hr class="w-25 mx-auto">
+                    <div class="slick-buttons">
+                    </div>
+                    <div class="relatedProducts bg-light">
+                        <div class="text-center">
+                            <img src="img/images/ladies/1.jpg" alt="">
+                            <p>Lorem, ipsum.</p>
+                            <button class="btn btn-dark">Add to cart</button>
+                        </div>
+                        <div class="text-center">
+                            <img src="img/images/ladies/2.jpg" alt="">
+                            <p>Lorem, ipsum.</p>
+                            <button class="btn btn-dark">Add to cart</button>
+                        </div>
+                        <div class="text-center">
+                            <img src="img/images/ladies/3.jpg" alt="">
+                            <p>Lorem, ipsum.</p>
+                            <button class="btn btn-dark">Add to cart</button>
+                        </div>
+                        <div class="text-center">
+                            <img src="img/images/ladies/4.jpg" alt="">
+                            <p>Lorem, ipsum.</p>
+                            <button class="btn btn-dark">Add to cart</button>
+                        </div>
+                        <div class="text-center">
+                            <img src="img/images/ladies/5.jpg" alt="">
+                            <p>Lorem, ipsum.</p>
+                            <button class="btn btn-dark">Add to cart</button>
+                        </div>
+                        <div class="text-center">
+                            <img src="img/images/ladies/6.jpg" alt="">
+                            <p>Lorem, ipsum.</p>
+                            <button class="btn btn-dark">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+
+                <!-- First block of second column -->
+                <div class="border text-center p-3 text-center padding">	
+                            <h6>SUB CATEGORIES</h6>
+                            <a href="products.html">Nullam semper elementum</a>								
+                        <br>
+                            <p class="">MANUFACTURES</p>
+                    </div>
+
+
+                    <!-- Second Block of second column -->
+
+                    <div class="text-center padding border mt-3 randomize">
+                            <h4 class="text-left pl-2">Randomize</h4> 
+                            <div class="random-button">
+                                    <button type="button" class="slick-prev" id="rand-prev">Previous</button>
+                                    <button type="button" class="slick-next" id="rand-next">Next</button>
+                            </div>
+							<div class="randomslide p-2">
+								<div class="border">											
+									<a href="product_detail.html">
+                                        <img class="img-fluid" alt="" src="img/images/ladies/7.jpg"></a><br>
+									<a href="product_detail.html" class="text-center">Fusce id molestie massa</a><br>
+									<a href="#" class="text-center">Suspendisse aliquet</a>
+									<p class="price">$261</p>
+								</div>
+							    <div class="border">												
+								    <a href="product_detail.html">
+                                        <img class="img-fluid" alt="" src="img/images/ladies/8.jpg"></a><br>
+									<a href="product_detail.html" class="title">Tempor sem sodales</a><br>
+									<a href="#" class="category">Urna nec lectus mollis</a>
+									<p class="price">$134</p>
+								</div>
+							</div>
+
+
+            </div>
+
+    </section>
+
+    <!-- footer in HTML -->
+    <footer class="bg-dark text-white border-top border-info">
+        <div class="container text-center text-sm-left position-relative py-5">
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4 text-center">
+                    <h3 class="text-info pb-2 border-bottom border-info">Quick Links</h3>
+                    <ul class="list-unstyled d-inline-block d-sm-block">
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">Home</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">About</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">Hotels</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <h3 class="text-info pb-2 border-bottom border-info">Lorem Ipsum</h3>
+                    <ul class="list-unstyled d-inline-block d-sm-block">
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <h3 class="text-info pb-2 border-bottom border-info">Quick Links</h3>
+                    <ul class="list-unstyled d-inline-block d-sm-block">
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Position to come top -->
+            <div class="text-center position-absolute w-100 mt-4">
+                <a href="#top">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="fa fa-angle-up fa-stack-1x text-white"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Second footer Started -->
+        <div class="pt-5 pb-4 bg-primary text-light">
+            <div class="container">
+                <div class="row">
+                    <!-- Second footer, first column -->
+                    <div class="col-md-6 col-lg-4 text-center text-md-left pb-4">
+                        <h2 class="mb-2 text-white">
+                            <i class="fas fa-gem fa-fw"></i> k4ps10ck</h2>
+                        <p class="mb-1">
+                            <i class="fas fa-map-marker fa-fw"></i>&nbsp;Gokarneshwor-7, Kathmandu</p>
+                        <p class="mb-1">
+                            <i class="fas fa-phone fa-fw"></i>&nbsp;+977 984 006 8134</p>
+                        <p class="mb-1">
+                            <i class="fas fa-envelope fa-fw"></i>&nbsp;
+                            <a href="mailto:meh_kapil@live.com" class="text-white">meh_kapil@live.com</a>
+                        </p>
+                    </div>
+                    <!-- Second footer, second column -->
+                    <div class="col-md-6 col-lg-4 text-center text-md-left pb-4">
+                        <p class="my-3">Post quorum necem nihilo lenius ferociens Gallus ut leo cadaveribus pastus multa huius modi scrutabatur.
+                            quae singula narrare non refert, me professione modum, quod evitandum est, excedamus.</p>
+                    </div>
+
+                    <!-- Second footer, third column -->
+                    <div class="col-lg-4 text-center text-lg-right pb-4">
+                        <h3 class="mb-0">Follow us</h3>
+                        <p class="mb-2">Subscribe to our newsletter</p>
+                        <form class="d-flex justify-content-center justify-content-lg-end">
+                            <div class="form-group w-75">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" required="" placeholder="Your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$"
+                                        inputmode="email">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark" type="submit">Go!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- All icons in footer -->
+                        <div>
+                            <a href="www.instagram.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="www.twitter.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                            <a href="www.facebook.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a href="www.snapchat.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-snapchat-ghost fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- last footer part of the page -->
+        <div class="text-center text-lg-left py-2 small bg-dark text-info font-italic">
+            <div class="container">
+                <p class="m-auto text-center">© 2018 Company ~ All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- All Script for the HTML -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <script src="code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="slick/slick.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="js/script.js"></script>
+    <!-- <script src="js/slickmanual.js"></script> -->
+</body>
+
+</html>

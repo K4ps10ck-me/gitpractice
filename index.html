@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Awesome 5 CSS  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <!-- Bootstrap CSS in HTML -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- SLick CSS in HTML -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <!-- Animated CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS in HTML -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/login.js"></script>
+    <title>Main Page</title>
+</head>
+
+<body>
+    <!-- Header part isn HTML-->
+    <div class="header-top container">
+        <div class="row">
+    
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ml-auto header-top-right">
+                <ul class="user-menu">
+                    <li>
+                        <a href="Profile.html" id="profile_menu">
+                            <img id="image" style="border-radius:50% ;width:40px">
+                        </a>
+                    </li>
+                    <li id="order_menu">
+                        <a href="OrderList.html">My Order</a>
+                    </li>
+                    <li id="login_menu">
+                        <a href="#loggedin" data-target="#loggedin" data-toggle="modal">Login</a>
+                    </li>
+                    <li>
+                        <a href="#register" data-toggle="modal" data-target="#register">Register</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <!-- for login modal -->
+        <div class="modal fade" id="loggedin" tabindex="-1" role="dialog" aria-labelledby="loggedin-model" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="Email">Email address</label>
+                                <input type="text" class="form-control" id="userName" aria-describedby="emailHelp" placeholder="Enter email or username" required>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="Password" placeholder="Password" required>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary">Forgot my password</button>
+                        <button type="submit" class="btn btn-primary" id="login">Login</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- For Register modal -->
+        <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="login-model" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registered">Register</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="f-name">Full Name</label>
+                                <input type="text" class="form-control" id="fullname" required>
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="Password" placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-target="#" data-toggle="modal">Already have an account?</button>
+                        <button type="button" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top clear" id="wrapper">
+        <a class="navbar-brand" href="index.html">Kirana Lol
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product_detail.html">Find products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html" id="cart_menu">In Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 ">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search for items..." aria-label="Search">
+                <button class="btn btn-outline-success my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Slider in the HTML -->
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img/banner-2.jpg" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>lorem ipsum</h5>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/banner-1.jpg" alt="Second slide">
+            </div>
+        </div>
+    </div>
+
+    <!-- Two blocks part Here -->
+    <section id="f-twoblock">
+        <div class="container padding">
+            <div class="row text-center">
+
+                <!-- Some Random lorem texts and button -->
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 padding f-block my-auto wow slideInLeft">
+                    <h3>Best Sellers</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, libero. Accusantium maiores, dolore
+                        officia praesentium distinctio architecto consectetur quam veritatis placeat</p>
+                    <br>
+                    <p> unde ratione quae vitae ipsam velit suscipit nulla sint sequi mollitia possimus! Nam saepe id enim fugit
+                        delectus. </p>
+                    <button class="btn btn-outline-secondary">Shop More</button>
+                </div>
+
+                <!-- Image contains in two block -->
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 s-block wow slideInRight">
+                    <img class="w-100 img-responsive" src="img/rice.jpg" alt="Random Img">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="w-75 mx-auto">
+
+    <!-- Featured Slider in four blocks HTML -->
+    <div class="container-fluid padding px-5 wow fadeInUp">
+        <h2 class="text-center">Our Amazing Products</h2>
+        <div class="row">
+            <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="500">
+                <div class="MultiCarousel-inner">
+                    <div class="item">
+                        <div>
+                            <h3 class="lead p-3">New Arrivals</h3>
+                            <a href="img/slider1.jpg">
+                                <img src="img/slider1.jpg" alt="">
+                            </a>
+                            <p class="p-2">Price: XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>
+                            <h3 class="lead p-3">New Arrivals</h3>
+                            <a href="img/slider1.jpg">
+                                <img src="img/slider1.jpg" alt="">
+                            </a>
+                            <p class="p-2">Price: XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>
+                            <h3 class="lead p-3">New Arrivals</h3>
+                            <a href="img/slider1.jpg">
+                                <img src="img/slider1.jpg" alt="">
+                            </a>
+                            <p class="p-2">Price: XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>
+                            <h3 class="lead p-3">New Arrivals</h3>
+                            <a href="img/slider1.jpg">
+                                <img src="img/slider1.jpg" alt="">
+                            </a>
+                            <p class="p-2">Price: XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>
+                            <h3 class="lead p-3">New Arrivals</h3>
+                            <a href="img/slider1.jpg">
+                                <img src="img/slider1.jpg" alt="">
+                            </a>
+                            <p class="p-2">Price: XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div>
+                            <h3 class="lead p-3">New Arrivals</h3>
+                            <a href="img/slider1.jpg">
+                                <img src="img/slider1.jpg" alt="">
+                            </a>
+                            <p class="p-2">Price: XXXX</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <button class="btn btn-primary leftLst">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <button class="btn btn-primary rightLst">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <hr class="h-50">
+    <!-- Recent products in three blocks HTML -->
+    <div class="container padding wow lightSpeedIn">
+        <h3 class="display-4 text-center">Dont miss out...</h3>
+        <div class="row padding text-center">
+            <!-- Cards for the HTML  -->
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 padding all-cards">
+                <div class="card ml-2 mr-2">
+                    <img class="card-img-top" src="img/rice.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Masino Chamal</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">See this...</a>
+                        <a href="#" class="btn btn-outline-secondary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 padding all-cards">
+                <div class="card ml-2 mr-2">
+                    <img class="card-img-top" src="img/rice.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Masino Chamal</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">See this...</a>
+                        <a href="#" class="btn btn-outline-secondary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 padding all-cards">
+                <div class="card ml-2 mr-2">
+                    <img class="card-img-top" src="img/rice.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Masino Chamal</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">See this...</a>
+                        <a href="#" class="btn btn-outline-secondary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 padding all-cards">
+                <div class="card ml-2 mr-2">
+                    <img class="card-img-top" src="img/rice.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Masino Chamal</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">See this...</a>
+                        <a href="#" class="btn btn-outline-secondary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 padding all-cards">
+                <div class="card ml-2 mr-2">
+                    <img class="card-img-top" src="img/rice.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Masino Chamal</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">See this...</a>
+                        <a href="#" class="btn btn-outline-secondary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 padding all-cards">
+                <div class="card ml-2 mr-2">
+                    <img class="card-img-top" src="img/rice.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Masino Chamal</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">See this...</a>
+                        <a href="#" class="btn btn-outline-secondary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- parallax in HTML page -->
+    <figure class="container-fluid">
+        <div class="parallax-fixed">
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, atque. Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Doloremque exercitationem quia quaerat quas repellendus voluptates cum similique modi pariatur totam. Lorem
+            ipsum dolor sit, amet consectetur adipisicing elit. Quisquam quasi sit dolorum, facere facilis libero tempora
+            alias perspiciatis molestiae error distinctio nesciunt tempore, earum dolorem aliquam enim, officiis ipsam porro
+            id mollitia doloremque hic voluptates perferendis ab. Similique, deleniti sequi."
+            <br>
+            <span class="align-content-end pr-4 mt-4 f-right bsk">Bibhushan Kumar</span>
+        </div>
+    </figure>
+
+    <!-- Vendors in HTML -->
+    <div class="container padding vendors">
+        <h2 class="text-center">Our Proud Vendors</h2>
+        <div class="row padding text-center">
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 padding">
+                <img src="img/vendors.png" alt="">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 padding">
+                <img src="img/vendors.png" alt="">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 padding">
+                <img src="img/vendors.png" alt="">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 padding">
+                <img src="img/vendors.png" alt="">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 padding">
+                <img src="img/vendors.png" alt="">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 padding">
+                <img src="img/vendors.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- footer in HTML -->
+    <footer class="bg-dark text-white border-top border-info">
+        <div class="container text-center text-sm-left position-relative py-5">
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4 text-center">
+                    <h3 class="text-info pb-2 border-bottom border-info">Quick Links</h3>
+                    <ul class="list-unstyled d-inline-block d-sm-block">
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">Home</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">About</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">Hotels</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <h3 class="text-info pb-2 border-bottom border-info">Lorem Ipsum</h3>
+                    <ul class="list-unstyled d-inline-block d-sm-block">
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <h3 class="text-info pb-2 border-bottom border-info">Quick Links</h3>
+                    <ul class="list-unstyled d-inline-block d-sm-block">
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                        <li class="mb-2 d-block">
+                            <a class="text-light" href="#">lorem</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Position to come top top -->
+            <div class="text-center position-absolute w-100 mt-4">
+                <a href="#top">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x text-dark"></i>
+                        <i class="fa fa-angle-up fa-stack-1x text-white"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Second footer Started -->
+        <div class="pt-5 pb-4 bg-primary text-light">
+            <div class="container">
+                <div class="row">
+                    <!-- Second footer, first column -->
+                    <div class="col-md-6 col-lg-4 text-center text-md-left pb-4">
+                        <h2 class="mb-2 text-white">
+                            <i class="fas fa-gem fa-fw"></i> k4ps10ck</h2>
+                        <p class="mb-1">
+                            <i class="fas fa-map-marker fa-fw"></i>&nbsp;Gokarneshwor-7, Kathmandu</p>
+                        <p class="mb-1">
+                            <i class="fas fa-phone fa-fw"></i>&nbsp;+977 984 006 8134</p>
+                        <p class="mb-1">
+                            <i class="fas fa-envelope fa-fw"></i>&nbsp;
+                            <a href="mailto:meh_kapil@live.com" class="text-white">meh_kapil@live.com</a>
+                        </p>
+                    </div>
+                    <!-- Second footer, second column -->
+                    <div class="col-md-6 col-lg-4 text-center text-md-left pb-4">
+                        <p class="my-3">Post quorum necem nihilo lenius ferociens Gallus ut leo cadaveribus pastus multa huius modi scrutabatur.
+                            quae singula narrare non refert, me professione modum, quod evitandum est, excedamus.</p>
+                    </div>
+
+                    <!-- Second footer, third column -->
+                    <div class="col-lg-4 text-center text-lg-right pb-4">
+                        <h3 class="mb-0">Follow us</h3>
+                        <p class="mb-2">Subscribe to our newsletter</p>
+                        <form class="d-flex justify-content-center justify-content-lg-end">
+                            <div class="form-group w-75">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" required="" placeholder="Your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$"
+                                        inputmode="email">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-dark" type="submit">Go!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- All icons in footer -->
+                        <div>
+                            <a href="www.instagram.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                            <a href="www.twitter.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                            <a href="www.facebook.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a href="www.snapchat.com" class="text-dark mx-2 mx-lg-0 ml-lg-3">
+                                <i class="fab fa-snapchat-ghost fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- last footer part of the page -->
+        <div class="text-center text-lg-left py-2 small bg-dark text-info font-italic">
+            <div class="container">
+                <p class="m-auto text-center">© 2018 Company ~ All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- All Script for the HTML -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <script src="code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- <script src="js/Connection.js"></script> -->
+    <script src="js/script.js"></script>
+
+    <script>
+            new WOW().init();
+    </script>
+</body>
+
+</html>
